@@ -1,9 +1,9 @@
 '''
-Dynamically generate word documents using data from a CSV - with 1 template file.
+Gerar dinamicamente documentos DOCX, a partir de um modelo existente, utilizando informações de um arquivo CSV.
 '''
-# Use with : template.docx in same dir
-# pip install python-docx
-# pip install docxtpl <- Better for making new files from a template
+# Arquivo utilizado: template.docx que deverá estar no mesmo diretório da aplicação
+# pip3 install python-docx pandas 
+# pip3 install docxtpl <- Better for making new files from a template
 import random
 import time
 import csv
@@ -11,7 +11,7 @@ import pandas as pd
 from docxtpl import DocxTemplate
 
 # Source CSV - column names that must match the *** that are {{***}} inside "template.docx"
-csvfn = "cnw.csv"
+csvfn = "cnw2.csv"
 
 def mkw(n):
     tpl = DocxTemplate("template.docx") # In same directory
